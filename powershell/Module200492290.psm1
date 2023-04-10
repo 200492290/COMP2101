@@ -31,7 +31,7 @@ $reportData | Format-Table -AutoSize
 }
 
 
-function SystemInformationReport {
+
 
 Function Get-ComputerSystem {
     $system = Get-CimInstance win32_computersystem
@@ -143,8 +143,4 @@ function Get-SystemReport {
     Get-VideoCardInfo
 }
 
-Get-SystemReport
 
-
-
-}
