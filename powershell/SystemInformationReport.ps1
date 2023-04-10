@@ -74,7 +74,6 @@ function Get-PhysicalDiskSummary {
 }
 
 
-
 Function Get-VideoCardInfo {
     $videoCard = Get-CimInstance win32_videocontroller
     $props = @{
@@ -101,6 +100,9 @@ function Get-SystemReport {
 
     Write-Host "`n=== Physical Disks ===`n"
     Get-PhysicalDiskSummary
+
+    Write-Host "`n=== Network Adapters ===`n"
+    IPConfigurationReport
 
     Write-Host "`n=== Video Card ===`n"
     Get-VideoCardInfo
